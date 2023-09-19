@@ -24,15 +24,13 @@ int _printf(const char *format, ...)
 				break;
 			if (*format == '%')
 			{
-				write(1, format, 1);
-				char_count++;
+				char_count += print_percent();
 			}
 			else if (*format == 'c')
 			{
 				char c = va_arg(args, int);
 
-				write(1, &c, 1);
-				char_count++;
+				char_count += print_char(c);
 			}
 			else if (*format == 's')
 			{
