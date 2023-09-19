@@ -37,9 +37,9 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 's')
 			{
-				char *str = va_arg(args, char *);
+				char *s = va_arg(args, char *);
 
-				char_count += print_string(str);
+				char_count += print_string(s);
 			}
 		}
 		else
