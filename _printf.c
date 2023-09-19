@@ -27,11 +27,7 @@ int _printf(const char *format, ...)
 				break;
 			if (*format == '%')
 			{
-<<<<<<< HEAD
-				char_count += print_char(format);
-=======
-				write(1, format, 1);
->>>>>>> 8b3fb090b053dd6cb94d761b664200b1da8594fc
+				char_count += print_char(*format);
 			}
 			else if (*format == 'c')
 			{
@@ -48,7 +44,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			char_count += print_char(format);
+			char_count += print_char(*format);
 		}
 		format++;
 	}
