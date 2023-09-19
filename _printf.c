@@ -44,7 +44,8 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			char_count += print_char(*format);
+			write(1, format, 1)
+			char_count++;
 		}
 		format++;
 	}
