@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdarg.h>
+#include <stdlib.h>
 
 /**
  * _printf - a function used for formated output.
@@ -24,7 +27,7 @@ int _printf(const char *format, ...)
 				break;
 			if (*format == '%')
 			{
-				char_count += print_percent();
+				char_count++;
 			}
 			else if (*format == 'c')
 			{
