@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * print_string - a function that prints a string.
  * @str: a pointer to a string.
@@ -6,7 +8,7 @@
 int print_string(const char *str)
 {
 	int str_count = 0;
-	
+
 	while (*str)
 	{
 		write(1, str, 1);
