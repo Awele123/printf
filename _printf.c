@@ -31,15 +31,15 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'c')
 			{
-				char c = va_arg(args, int);
-
-				char_count += print_char(c);
+				char_count += print_char(va_arg(args, int));
 			}
 			else if (*format == 's')
 			{
-				char *str = va_arg(args, char *);
-
-				char_count += print_string(str);
+				char_count += print_string(va_arg(args, char *));
+			}
+			else if (*format == 'd' || *format == 'i')
+			{
+				char_count += print_int(va_arg(args, int));
 			}
 		}
 		else
