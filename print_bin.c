@@ -6,21 +6,21 @@
  * @count: an integer to count printed digits.
  * Return: the number of digits printed.
  */
-int print_bin(unsigned int num)
+int print_bin(unsigned int num, int count)
 {
 	char buffer[32];
-	int i = num;
+	int i;
 
-	for (i = 0; i >= 0; i++)
+	for (i = 31; i >= 0; i--)
 	{
-		buffer[i] = num % 2;
-		num = num / 2;
+		int bit = (num >> i) & 1;
+		buffer[count++] = bit + '0';
 	}
-	return (buffer[i]);
+	for (i = 1; i < 32; i++)
+	{
+		buffer[i] = (num / 2) % 2;
+	}
+	write (1, buffer, count);
 
-	for (i = i; i >= 0; i--)
-	{
-		write (1, &buffer, 1);
-	}
-	return (buffer[i]);
+	return (count);
 }
