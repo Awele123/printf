@@ -1,12 +1,12 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "main.h"
 /**
- * print_dec -function that prints an integer
+ * print_dec -function that prints an decimal.
+ *
  * @num: parameter to be printed
+ * Return: 0 on success.
  */
 
-void print_dec(int num)
+int print_dec(int num)
 {
 	if (num/10 < 0)
 	{
@@ -16,4 +16,5 @@ void print_dec(int num)
 	{
 		write(1, &num, 1);
 	}
+	return (0);
 }
