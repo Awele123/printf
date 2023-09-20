@@ -8,18 +8,14 @@
  */
 int print_bin(unsigned int num)
 {
-	int l = 0;
-	int bin = 0;
-	int p = 1;
-
-	while (num)
+	int bin;
+	
+	if (num > 0 )
 	{
-		l = num % 2;
-		num = num / 2;
-		bin = bin + (l * p);
-		p = p * 10;
+		bin = num % 2;
+		num /= 2;
 	}
-	write(1, &bin, 1);
+	write (1, &bin, 1);
 
 	return (0);
 }
