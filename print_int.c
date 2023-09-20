@@ -8,11 +8,19 @@
  */
 int print_int(int num)
 {
-	if (num == NULL)
+	if (num < 0)
 	{
-		return (-1);
+		write(1, &num, 1);
 	}
-	if (num != NULL)
+	else if (num > 0)
+	{
+		write(1, &num, 1);
+	}
+	else if (num/10 < 0)
+	{
+		write(1, &num, 1);
+	}
+	else if (num/10 > 0)
 	{
 		write(1, &num, 1);
 	}
