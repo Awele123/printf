@@ -8,14 +8,14 @@
  */
 int print_bin(unsigned int num)
 {
-	int bin;
-	
-	if (num > 0 )
-	{
-		bin = num % 2;
-		num /= 2;
-	}
-	write (1, &bin, 1);
+	char buffer[36];
+	int b;
 
+	for (b = 0; num > 0; b++)
+	{
+		buffer[b] = num % 2;
+		num = num /2;
+	}
+	write (1, &buffer[b], 1);
 	return (0);
 }
