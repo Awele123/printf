@@ -42,6 +42,10 @@ int _printf(const char *format, ...)
 			{
 				char_count += print_num(va_arg(args, int), 0);
 			}
+			else if (*format == 'b')
+			{
+				char_count += print_bin(va_arg(args, unsigned int), 0);
+			}
 		}
 		else
 		{
