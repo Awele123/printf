@@ -39,7 +39,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'd')
 			{
-				char_count += print_int(va_arg(args, int));
+				char_count += print_dec(va_arg(args, int));
 			}
 			else if (*format == 'i')
 			{
