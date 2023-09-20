@@ -7,9 +7,6 @@
  */
 int print_char(const char c)
 {
-	int count = 0;
-
 	write(1, &c, 1);
-	count++;
-	return (count);
+	return (1);
 }
