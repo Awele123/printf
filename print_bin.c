@@ -16,10 +16,6 @@ int print_bin(unsigned int num, int count)
 		int bit = (num >> i) & 1;
 		buffer[count++] = bit + '0';
 	}
-	for (i = 1; i < 32; i++)
-	{
-		buffer[i] = (num / 2) % 2;
-	}
 	write (1, buffer, count);
 
 	return (count);
